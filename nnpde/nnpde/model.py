@@ -120,13 +120,14 @@ class JacobyWithConv:
             # Store lossses for visualization
             losses.append(total_loss)
 
-
             # Check convergence
             if np.abs(total_loss - prev_total_loss) < self.tol:
                 convergence_counter += 1
-                #print(convergence_counter)
-                #print(self.stable_count)
+                # print(convergence_counter)
+                # print(self.stable_count)
                 if convergence_counter > self.stable_count:
+                    logging.info(
+                        f"Convergence reached")
                     break
             else:
                 convergence_counter = 0
@@ -136,12 +137,11 @@ class JacobyWithConv:
             # Display information every 100 iterations
             if n_epoch % 100 == 0:
                 logging.info(
-                    f"iter {n_epoch} with total loss {prev_total_loss}")
+                    f"Epoch {n_epoch} with total loss {prev_total_loss}")
 
         #self.H = helpers.conv_net_to_matrix(self.net, self.N)
         self.losses = losses
         logging.info(
-            f"Convergence reached in {n_epoch} epochs with total loss {total_loss}")
-        return self
+            f"{n_epoch} epochs with total loss {total_loss}")
 
         return self
