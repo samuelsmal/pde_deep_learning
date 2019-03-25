@@ -62,5 +62,5 @@ a PyTorch tensor.
 
 Francesco Bardi, Samuel Edler von Baussnern, Emiljano Gjiriti
 
-fransesco.bardi@epfl.ch, samuel.edervonbaussnern@epfl.ch, emiljano.gjiriti@epfl.ch
+fransesco.bardi@epfl.ch, samuel.edlervonbaussnern@epfl.ch, emiljano.gjiriti@epfl.ch
 
